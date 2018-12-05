@@ -1,4 +1,4 @@
-function [modelList, distributions]=genInput()
+function [allOptions, distributions]=genInput()
 % generate input for the actual evaluating function
 
 distributions={
@@ -38,3 +38,12 @@ modelList = {
     PCEOpts2, 'PCE10,200', 1;
     PCEOpts4, 'PCE10,300', 10;
             }
+
+sideopt = {
+    2, 'number of MC inputs';
+    4, 'index to output';
+    4, 'maximum order';
+          }
+
+allOptions.models=modelList;
+allOptions.side=sideopt;
